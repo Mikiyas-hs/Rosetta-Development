@@ -1,9 +1,8 @@
-import { base44 } from './base44Client';
+// base44 verwijderd – placeholder export
 
-
-export const Project = base44.entities.Project;
-
-
-
-// auth sdk:
-export const User = base44.auth;
+export const Project = {
+    getAll: async () => [],
+  };
+  
+  export const User = null;
+  
