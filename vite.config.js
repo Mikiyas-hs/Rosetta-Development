@@ -1,18 +1,19 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite' // ⬅️ deze regel is essentieel
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// https://vite.dev/config/
+
 export default defineConfig({
+  base: '/Rosetta-Development/', // <-- dit is jouw repo-naam
   plugins: [react()],
   server: {
-    allowedHosts: true
+    allowedHosts: true,
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-    extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
   },
   optimizeDeps: {
     esbuildOptions: {
@@ -21,4 +22,4 @@ export default defineConfig({
       },
     },
   },
-}) 
+})
